@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+
+<html>
+<body>
+
+<form action="/scrape_irs" method="GET">
+<Label>ZIP Code</Label><input type="text" name="zipcode" pattern="[0-9]{5}" title="Five digit zip code" id="zipcode"/>
+<button  type="submit">Submit</button> 
+</form>
+
+<p>Enter a zipcode and we will extract the data from the IRS website.</p>
+
+<link rel="stylesheet" href="tabulator.css">
+<script type="text/javascript" src="tabulator.js"></script>
+<div id="example-table"></div>
+
+  
+
+</body>
+
+
+</html>
