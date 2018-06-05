@@ -4,15 +4,6 @@ import {Logger, ConsoleLogger} from 'react-console-logger';
 import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 const myLogger = new Logger();
 var $ = require("jquery");
-var products = [{
-      id: 1,
-      name: "Product1",
-      price: 120
-  }, {
-      id: 2,
-      name: "Product2",
-      price: 80
-  }];
 
 let order = 'desc';
 
@@ -34,7 +25,7 @@ class SortTable extends React.Component {
 
     loadData() {
       $.ajax({
-         url: 'http://localhost:3001/scrape_irs?zipcode='+this.state.zipcode,
+         url: 'http://127.0.0.1:3001/scrape_irs?zipcode='+this.state.zipcode,
          //url: 'out.json',
          dataType: 'json',
          success: function(irs_data) {
